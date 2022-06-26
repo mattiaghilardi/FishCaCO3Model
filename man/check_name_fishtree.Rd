@@ -35,6 +35,3 @@ Rabosky D. L. et al. (2018) An inverse latitudinal gradient in
 speciation rate for marine fishes. Nature, 559, 392–395.
 https://doi.org/10.1038/s41586-018-0273-1
 }
-\author{
-Mattia Ghilardi, \email{mattia.ghilardi91@gmail.com}
-}

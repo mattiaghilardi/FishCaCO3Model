@@ -11,8 +11,8 @@
 #' \item{"not_sampled":} species without genetic data
 #' }
 #'
-#' @author Mattia Ghilardi, \email{mattia.ghilardi91@@gmail.com}
-#' 
+#' @importFrom fishtree fishtree_taxonomy
+#'
 #' @examples
 #' \dontrun{
 #' check_name_fishtree("Boops boops")
@@ -31,33 +31,33 @@ check_name_fishtree <- function(species_list, sampled = FALSE) {
 
   # Check names
   sp_error <- species_list[!(species_list %in% sp_fishtree$species)]
-  
+
   # If sampled=TRUE check sampled species
   if (isTRUE(sampled)) {
     sp_not_sampled <- species_list[!(species_list %in% sp_fishtree$sampled_species)]
-    
+
     # Message
     if (length(sp_error) == 0) {
       message("All species names are correct")
     } else {
       message("Some species name are incorrect or not present in the Fish Tree of Life")
-    } 
+    }
     if (length(sp_not_sampled) == 0) {
       message("All species have genetic data")
     } else {
       message("Some species do not have genetic data")
     }
-    
+
     # Output
     list(name_error = sp_error,
          not_sampled = sp_not_sampled)
-    
+
   } else {
     if (length(sp_error) == 0) {
       message("All species names are correct")
     } else {
       message("These species names are incorrect or not present in the Fish Tree of Life:")
       sp_error
-    } 
+    }
   }
 }
