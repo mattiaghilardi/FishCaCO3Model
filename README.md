@@ -16,32 +16,32 @@ tables of the paper
 This repository is structured as follow:
 
 -   [:file_folder:
-    data/](https://github.com/mattiaghilardi/FishCaCO3Model/data):
+    data/](https://github.com/mattiaghilardi/FishCaCO3Model/tree/master/data):
     contains all data used in the analyses.
 
 -   [:file_folder:
-    analysis/](https://github.com/mattiaghilardi/FishCaCO3Model/analysis):
+    analysis/](https://github.com/mattiaghilardi/FishCaCO3Model/tree/master/analysis):
     contains R scripts to reproduce the analyses.
 
 -   [:file_folder:
-    outputs/](https://github.com/mattiaghilardi/FishCaCO3Model/outputs):
+    outputs/](https://github.com/mattiaghilardi/FishCaCO3Model/tree/master/outputs):
     contains all the outputs created during the analyses, including
     figures, tables and models.
 
 -   [:file_folder:
-    R/](https://github.com/mattiaghilardi/FishCaCO3Model/R): contains R
-    functions developed mainly for this project.
+    R/](https://github.com/mattiaghilardi/FishCaCO3Model/tree/master/R):
+    contains R functions developed mainly for this project.
 
 -   [:file_folder:
-    man/](https://github.com/mattiaghilardi/FishCaCO3Model/man):
+    man/](https://github.com/mattiaghilardi/FishCaCO3Model/tree/master/man):
     contains help files of R functions.
 
 -   [:page_facing_up:
-    DESCRIPTION](https://github.com/mattiaghilardi/FishCaCO3Model/DESCRIPTION):
+    DESCRIPTION](https://github.com/mattiaghilardi/FishCaCO3Model/blob/master/DESCRIPTION):
     contains project metadata.
 
 -   [:page_facing_up:
-    make.R](https://github.com/mattiaghilardi/FishCaCO3Model/make.R):
+    make.R](https://github.com/mattiaghilardi/FishCaCO3Model/blob/master/make.R):
     main R script to run the entire project.
 
 ## Instructions
