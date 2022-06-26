@@ -1,0 +1,11 @@
+^renv$
+^renv\.lock$
+^FishCaCO3Model\.Rproj$
+^\.Rproj\.user$
+^LICENSE\.md$
+^README\.Rmd$
+^analysis$
+^data$
+^outputs$
+^manuscript$
+^make\.R$

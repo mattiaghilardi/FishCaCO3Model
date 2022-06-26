@@ -1,0 +1,193 @@
+family,genus,species,region,location,date,tank_id,fish_per_tank,mean_weight_kg,sampling_interval_h,mean_T,mean_S,mean_ph,exc_rate_umol_h,method,trophic_level,level_troph,aspect_ratio,level_ar,elongation,level_elon
+Sillaginidae,Sillago,Sillago sihama,Australia,Heron Island,Apr-14,Wh1,3,0.2027,73.27,25,36.5,8.18,5.476954,double,3.18,species,1.13,species,5.3,species
+Scorpaenidae,Dendrochirus,Dendrochirus zebra,Australia,Heron Island,Apr-14,Tk1,1,0.053,97.25,25,36.5,8.18,1.79564,double,4,species,1.04,species,2.67,species
+Sillaginidae,Sillago,Sillago sihama,Australia,Heron Island,Apr-14,Wh2,2,0.4205,73.32,25,36.5,8.18,6.118275,double,3.18,species,1.13,species,5.3,species
+Pinguipedidae,Parapercis,Parapercis queenslandica,Australia,Heron Island,Apr-14,Sa1,1,0.1754,97.34,25,36.5,8.18,2.338082,double,3.63,genus,1.32,genus,5.24,genus
+Pseudochromidae,Ogilbyina,Ogilbyina queenslandiae,Australia,Heron Island,Apr-14,Db1,1,0.012,48.85,25,36.5,8.18,0.22764,double,3.56,family,0.78,species,2.76,species
+Pinguipedidae,Parapercis,Parapercis queenslandica,Australia,Heron Island,Apr-14,Sa2,1,0.06,73.83,25,36.5,8.18,1.071,double,3.63,genus,1.32,genus,5.24,genus
+Serranidae,Epinephelus,Epinephelus quoyanus,Australia,Heron Island,Apr-14,LfR1,1,0.042,48.83,25,36.5,8.18,1.3209,double,3.64,species,1.33,species,2.94,species
+Sillaginidae,Sillago,Sillago sihama,Australia,Heron Island,Apr-14,Wh3,3,0.218,90.21,25,36.5,8.18,2.75334,double,3.18,species,1.13,species,5.3,species
+Sillaginidae,Sillago,Sillago sihama,Australia,Heron Island,Apr-14,Wh4,2,0.1675,90.36,25,36.5,8.18,2.62305,double,3.18,species,1.13,species,5.3,species
+Sillaginidae,Sillago,Sillago sihama,Australia,Heron Island,Apr-14,Wh5,2,0.1935,46.25,25,36.5,8.18,6.53256,double,3.18,species,1.13,species,5.3,species
+Lethrinidae,Lethrinus,Lethrinus miniatus,Australia,Heron Island,Apr-14,RtE1,2,0.415,73.95,25,36.5,8.18,15.035449999999996,double,3.77,species,2.12,species,2.85,species
+Lutjanidae,Lutjanus,Lutjanus carponotatus,Australia,Heron Island,Apr-14,SpF1,1,0.328,76.45,25,36.5,8.18,12.38528,double,4.02,species,2.04,species,2.64,species
+Lethrinidae,Lethrinus,Lethrinus miniatus,Australia,Heron Island,Apr-14,RtE2,2,0.591,78.57,25,36.5,8.18,6.12867,double,3.77,species,2.12,species,2.85,species
+Lethrinidae,Lethrinus,Lethrinus miniatus,Australia,Heron Island,Apr-14,RtE3,1,0.404,78.84,25,36.5,8.18,9.58288,double,3.77,species,2.12,species,2.85,species
+Lethrinidae,Lethrinus,Lethrinus miniatus,Australia,Heron Island,Apr-14,RtE4,1,0.535,22.28,25,36.5,8.18,12.7758,double,3.77,species,2.12,species,2.85,species
+Lethrinidae,Lethrinus,Lethrinus miniatus,Australia,Heron Island,Apr-14,RtE5,1,0.828,69.01,25,36.5,8.18,8.503559999999998,double,3.77,species,2.12,species,2.85,species
+Lethrinidae,Gymnocranius,Gymnocranius audleyi,Australia,Heron Island,Apr-14,BeS1,1,0.354,76.49,25,36.5,8.18,5.77728,double,3.4,species,1.34,species,3.06,species
+Lethrinidae,Gymnocranius,Gymnocranius audleyi,Australia,Heron Island,Apr-14,BeS2,1,0.532,73.65,25,36.5,8.18,9.08124,double,3.4,species,1.34,species,3.06,species
+Serranidae,Epinephelus,Epinephelus fasciatus,Australia,Heron Island,Apr-14,BtR1,1,0.395,77.45,25,36.5,8.18,3.2153000000000005,double,3.85,species,1.56,species,3.12,species
+Serranidae,Epinephelus,Epinephelus fasciatus,Australia,Heron Island,Apr-14,BtR2,1,0.355,73.16,25,36.5,8.18,7.74255,double,3.85,species,1.56,species,3.12,species
+Serranidae,Epinephelus,Epinephelus fasciatus,Australia,Heron Island,Apr-14,BtR3,1,0.355,74.51,25,36.5,8.18,21.7047,double,3.85,species,1.56,species,3.12,species
+Serranidae,Plectropomus,Plectropomus leopardus,Australia,Heron Island,Apr-14,LCg1,1,0.865,69.02,25,36.5,8.18,14.185999999999998,double,4.41,species,1.6,species,3.33,species
+Serranidae,Epinephelus,Epinephelus fasciatus,Australia,Heron Island,Apr-14,BtR4,1,0.075,76.28,25,36.5,8.18,1.16775,double,3.85,species,1.56,species,3.12,species
+Caesionidae,Caesio,Caesio cuning,Australia,Heron Island,Apr-14,Fu1,1,0.455,48.83,25,36.5,8.18,10.3376,double,3.4,species,3.32,species,2.43,species
+Serranidae,Epinephelus,Epinephelus fasciatus,Australia,Heron Island,Apr-14,BtR5,1,0.283,69.05,25,36.5,8.18,6.834449999999999,double,3.85,species,1.56,species,3.12,species
+Serranidae,Plectropomus,Plectropomus leopardus,Australia,Heron Island,Apr-14,LCg2,2,1.65,48.9,25,36.5,8.18,10.3455,double,4.41,species,1.6,species,3.33,species
+Lethrinidae,Gymnocranius,Gymnocranius audleyi,Australia,Heron Island,Apr-14,BeS3,2,0.317,73.71,25,36.5,8.18,3.3728800000000003,double,3.4,species,1.34,species,3.06,species
+Lutjanidae,Lutjanus,Lutjanus adetii,Australia,Heron Island,Apr-14,Hu1,1,0.555,73.16,25,36.5,8.18,15.745350000000002,double,4.01,species,2.62,species,2.53,species
+Lethrinidae,Lethrinus,Lethrinus miniatus,Australia,Heron Island,Apr-14,RtE6,3,0.5223,73.4,25,36.5,8.18,14.284905,double,3.77,species,2.12,species,2.85,species
+Lethrinidae,Lethrinus,Lethrinus miniatus,Australia,Heron Island,Apr-14,RtE7,1,1.16,69,25,36.5,8.18,52.2812,double,3.77,species,2.12,species,2.85,species
+Lethrinidae,Lethrinus,Lethrinus miniatus,Australia,Heron Island,Apr-14,RtE8,2,1.204,73.56,25,36.5,8.18,17.77104,double,3.77,species,2.12,species,2.85,species
+Lethrinidae,Lethrinus,Lethrinus miniatus,Australia,Heron Island,Apr-14,RtE9,1,0.886,69.02,25,36.5,8.18,15.88598,double,3.77,species,2.12,species,2.85,species
+Serranidae,Plectropomus,Plectropomus leopardus,Australia,Heron Island,Apr-14,LCg3,1,2.8,73.51,25,36.5,8.18,43.4,double,4.41,species,1.6,species,3.33,species
+Lutjanidae,Lutjanus,Lutjanus adetii,Australia,Heron Island,Apr-14,Hu2,2,0.4885,73.28,25,36.5,8.18,19.681665,double,4.01,species,2.62,species,2.53,species
+Pseudochromidae,Ogilbyina,Ogilbyina queenslandiae,Australia,Heron Island,Apr-14,Db2,1,0.017,73.5,25,36.5,8.18,0.28220000000000006,double,3.56,family,0.78,species,2.76,species
+Scorpaenidae,Scorpaenopsis,Scorpaenopsis diabolus,Australia,Heron Island,Apr-14,DSf2,1,0.0019,23.02,25,36.5,8.18,0.16953700000000002,double,4.2,species,1.44,species,2.53,species
+Latidae,Lates,Lates calcarifer,Australia,Moreton Bay,May-15,Bar1,1,0.85,89.75,23,35.1,8.09,11.0925,double,3.83,species,1.06,species,3.5,species
+Latidae,Lates,Lates calcarifer,Australia,Moreton Bay,May-15,Bar2,1,0.81,74.45,23,35.1,8.09,6.2532000000000005,double,3.83,species,1.06,species,3.5,species
+Latidae,Lates,Lates calcarifer,Australia,Moreton Bay,May-15,Bar3,1,0.84,74.77,23,35.1,8.09,5.5607999999999995,double,3.83,species,1.06,species,3.5,species
+Latidae,Lates,Lates calcarifer,Australia,Moreton Bay,May-15,Bar4,1,0.65,74.78,23,35.1,8.09,11.479,double,3.83,species,1.06,species,3.5,species
+Latidae,Lates,Lates calcarifer,Australia,Moreton Bay,May-15,Bar5,1,0.59,74.44,23,35.1,8.09,9.8589,double,3.83,species,1.06,species,3.5,species
+Latidae,Lates,Lates calcarifer,Australia,Moreton Bay,May-15,Bar6,1,1.01,74.43,23,35.1,8.09,13.1401,double,3.83,species,1.06,species,3.5,species
+Lutjanidae,Lutjanus,Lutjanus russellii,Australia,Moreton Bay,May-15,Mp1,2,0.091,72.8,23,35.1,8.09,2.49249,double,3.8,species,2.21,species,2.77,species
+Lutjanidae,Lutjanus,Lutjanus russellii,Australia,Moreton Bay,May-15,Mp2,2,0.124,72.61,23,35.1,8.09,2.63252,double,3.8,species,2.21,species,2.77,species
+Lutjanidae,Lutjanus,Lutjanus russellii,Australia,Moreton Bay,May-15,Mp3,1,0.137,71.57,23,35.1,8.09,3.9771100000000006,double,3.8,species,2.21,species,2.77,species
+Lutjanidae,Lutjanus,Lutjanus russellii,Australia,Moreton Bay,May-15,Mp4,2,0.11,95.02,23,35.1,8.09,3.0580000000000003,double,3.8,species,2.21,species,2.77,species
+Sparidae,Pagrus,Pagrus auratus,Australia,Moreton Bay,May-15,Sp1,1,0.145,94.96,23,35.1,8.09,4.9793,double,3.47,species,3.3,species,2.28,species
+Lutjanidae,Lutjanus,Lutjanus russellii,Australia,Moreton Bay,May-15,Mp5,1,0.141,59.08,23,35.1,8.09,5.20149,double,3.8,species,2.21,species,2.77,species
+Latidae,Lates,Lates calcarifer,Australia,Moreton Bay,May-15,Bar7,1,0.7,74.79,23,35.1,8.09,13.817999999999998,double,3.83,species,1.06,species,3.5,species
+Apogonidae,Ostorhinchus,Ostorhinchus limenus,Australia,Moreton Bay,May-15,Car1,1,0.025,40.65,23,35.1,8.09,0.8907500000000002,double,3.51,genus,1.71,species,2.77,species
+Lethrinidae,Lethrinus,Lethrinus nebulosus,Australia,Moreton Bay,May-15,SE1,1,0.183,59.26,23,35.1,8.09,1.57014,double,3.64,species,1.84,species,2.61,species
+Latidae,Lates,Lates calcarifer,Australia,Moreton Bay,May-15,Bar8,2,0.0308,74.47,23,35.1,8.09,0.858396,double,3.83,species,1.06,species,3.5,species
+Lethrinidae,Lethrinus,Lethrinus nebulosus,Australia,Moreton Bay,May-15,SE2,1,0.197,71.36,23,35.1,8.09,3.16382,double,3.64,species,1.84,species,2.61,species
+Haemulidae,Plectorhinchus,Plectorhinchus picus,Australia,Moreton Bay,May-15,SL1,1,0.188,71.37,23,35.1,8.09,3.29752,double,3.85,species,1.98,species,2.84,species
+Tetrarogidae,Centropogon,Centropogon australis,Australia,Moreton Bay,May-15,BF1,1,0.001,50.78,23,35.1,8.09,0.05107,double,3.6,family,1.53,species,2.7,species
+Tetrarogidae,Centropogon,Centropogon australis,Australia,Moreton Bay,May-15,BF2,1,0.0032,71.67,23,35.1,8.09,0.14294400000000002,double,3.6,family,1.53,species,2.7,species
+Latidae,Lates,Lates calcarifer,Australia,Moreton Bay,May-15,Bar9,2,0.0062,74.57,23,35.1,8.09,0.145142,double,3.83,species,1.06,species,3.5,species
+Latidae,Lates,Lates calcarifer,Australia,Moreton Bay,May-15,Bar10,6,0.0052,73.17,23,35.1,8.09,0.329212,double,3.83,species,1.06,species,3.5,species
+Latidae,Lates,Lates calcarifer,Australia,Moreton Bay,May-15,Bar11,1,0.51,77.43,23,35.1,8.09,11.8422,double,3.83,species,1.06,species,3.5,species
+Lutjanidae,Lutjanus,Lutjanus russellii,Australia,Moreton Bay,May-15,Mp6,3,0.0973,72.83,23,35.1,8.09,1.376795,double,3.8,species,2.21,species,2.77,species
+Latidae,Lates,Lates calcarifer,Australia,Moreton Bay,May-15,Bar12,2,0.0284,74.56,23,35.1,8.09,0.455536,double,3.83,species,1.06,species,3.5,species
+Tetrarogidae,Centropogon,Centropogon australis,Australia,Moreton Bay,May-14,BF3,1,0.0032,112.78,23,35.1,8.09,0.135904,double,3.6,family,1.53,species,2.7,species
+Tetrarogidae,Centropogon,Centropogon australis,Australia,Moreton Bay,May-14,BF4,2,0.0033,96.92,23,35.1,8.09,0.105864,double,3.6,family,1.53,species,2.7,species
+Terapontidae,Helotes,Helotes sexlineatus,Australia,Moreton Bay,May-14,Tru1,1,0.0145,73.97,23,35.1,8.09,0.462695,double,2,species,1.49,species,3.88,species
+Sparidae,Pagrus,Pagrus auratus,Australia,Moreton Bay,May-14,Sp2,1,0.064,69.9,23,35.1,8.09,1.42784,double,3.47,species,3.3,species,2.28,species
+Lutjanidae,Lutjanus,Lutjanus russellii,Australia,Moreton Bay,May-14,Mp7,2,0.1235,168.84,23,35.1,8.09,4.62631,double,3.8,species,2.21,species,2.77,species
+Lutjanidae,Lutjanus,Lutjanus russellii,Australia,Moreton Bay,May-14,Mp8,2,0.1635,49.88,23,35.1,8.09,7.9461,double,3.8,species,2.21,species,2.77,species
+Lethrinidae,Lethrinus,Lethrinus nebulosus,Australia,Moreton Bay,May-14,SE3,1,0.22,96.78,23,35.1,8.09,5.8608,double,3.64,species,1.84,species,2.61,species
+Sparidae,Pagrus,Pagrus auratus,Australia,Moreton Bay,May-14,Sp3,2,0.095,93.06,23,35.1,8.09,2.451,double,3.47,species,3.3,species,2.28,species
+Lutjanidae,Lutjanus,Lutjanus russellii,Australia,Moreton Bay,May-14,Mp9,3,0.1037,73.79,23,35.1,8.09,3.3329180000000003,double,3.8,species,2.21,species,2.77,species
+Lethrinidae,Lethrinus,Lethrinus genivittatus,Australia,Moreton Bay,May-14,GE1,5,0.0476,73.85,23,35.1,8.09,1.497972,double,3.61,species,1.85,species,2.96,species
+Lethrinidae,Lethrinus,Lethrinus genivittatus,Australia,Moreton Bay,May-14,GE2,5,0.0766,49.34,23,35.1,8.09,1.58945,double,3.61,species,1.85,species,2.96,species
+Lethrinidae,Lethrinus,Lethrinus genivittatus,Australia,Moreton Bay,May-14,GE3,6,0.0843,73.94,23,35.1,8.09,2.176626,double,3.61,species,1.85,species,2.96,species
+Lutjanidae,Lutjanus,Lutjanus russellii,Australia,Moreton Bay,May-14,Mp10,3,0.1513,91.67,23,35.1,8.09,4.110821,double,3.8,species,2.21,species,2.77,species
+Sparidae,Pagrus,Pagrus auratus,Australia,Moreton Bay,May-14,Sp4,3,0.1313,70.11,23,35.1,8.09,3.633071,double,3.47,species,3.3,species,2.28,species
+Terapontidae,Helotes,Helotes sexlineatus,Australia,Moreton Bay,May-14,Tru2,11,0.0011,99.82,23,35.1,8.09,0.065384,double,2,species,1.49,species,3.88,species
+Terapontidae,Helotes,Helotes sexlineatus,Australia,Moreton Bay,May-14,Tru3,7,0.0097,49.96,23,35.1,8.09,0.349006,double,2,species,1.49,species,3.88,species
+Sparidae,Acanthopagrus,Acanthopagrus australis,Australia,Moreton Bay,May-14,YfB1,2,0.0176,71.43,23,35.1,8.09,0.301136,double,3.1,species,1.5,species,2.16,species
+Sparidae,Rhabdosargus,Rhabdosargus sarba,Australia,Moreton Bay,May-14,TW1,3,0.0897,75.3,23,35.1,8.09,2.44881,double,3.25,species,2.8,species,2.18,species
+Sparidae,Rhabdosargus,Rhabdosargus sarba,Australia,Moreton Bay,May-14,TW2,2,0.085,66.14,23,35.1,8.09,3.1314000000000006,double,3.25,species,2.8,species,2.18,species
+Sparidae,Acanthopagrus,Acanthopagrus australis,Australia,Moreton Bay,May-14,YfB2,1,0.202,93.09,23,35.1,8.09,2.7876000000000003,double,3.1,species,1.5,species,2.16,species
+Terapontidae,Helotes,Helotes sexlineatus,Australia,Moreton Bay,May-14,Tru4,10,0.005,73.86,23,35.1,8.09,0.3281,double,2,species,1.49,species,3.88,species
+Sillaginidae,Sillago,Sillago maculata,Australia,Moreton Bay,May-14,Whit1,4,0.0103,18.3,23,35.1,8.09,0.37492,double,3.52,species,0.96,species,4.87,species
+Sygnathidae,Hippocampus,Hippocampus whitei,Australia,Moreton Bay,May-14,SH1,1,0.0025,46.87,23,35.1,8.09,0.179225,double,3.47,genus,0.87,family,8.57,genus
+Diodontidae,Tragulichthys,Tragulichthys jaculiferus,Australia,Moreton Bay,May-14,PF1,1,0.91,71.57,23,35.1,8.09,2.3296,double,3.5,species,1.6,species,2.1,species
+Sparidae,Pagrus,Pagrus auratus,Australia,Moreton Bay,May-14,SP5,1,0.11,75.7,23,35.1,8.09,1.5268000000000002,double,3.47,species,3.3,species,2.28,species
+Sparidae,Acanthopagrus,Acanthopagrus australis,Australia,Moreton Bay,May-14,YfB3,1,0.0814,74.65,23,35.1,8.09,1.04192,double,3.1,species,1.5,species,2.16,species
+Lutjanidae,Lutjanus,Lutjanus russellii,Australia,Moreton Bay,May-14,Mp11,1,0.0171,73.53,23,35.1,8.09,0.14671800000000002,double,3.8,species,2.21,species,2.77,species
+Sparidae,Acanthopagrus,Acanthopagrus australis,Australia,Moreton Bay,May-14,YfB4,2,0.0805,94.96,23,35.1,8.09,1.190595,double,3.1,species,1.5,species,2.16,species
+Labridae,Halichoeres,Halichoeres trimaculatus,Australia,Heron Island,Apr-14,TsW1,2,0.042,44.98,25,36.5,8.18,1.4784000000000002,double,3.46,species,1.41,species,3.09,species
+Labridae,Halichoeres,Halichoeres trimaculatus,Australia,Heron Island,Apr-14,TsW2,1,0.052,26,25,36.5,8.18,3.19228,double,3.46,species,1.41,species,3.09,species
+Labridae,Halichoeres,Halichoeres trimaculatus,Australia,Heron Island,Apr-14,TsW3,2,0.037,25.75,25,36.5,8.18,1.98061,double,3.46,species,1.41,species,3.09,species
+Labridae,Halichoeres,Halichoeres trimaculatus,Australia,Heron Island,Apr-14,TsW4,1,0.06,36,25,36.5,8.18,2.472,double,3.46,species,1.41,species,3.09,species
+Labridae,Thalassoma,Thalassoma lunare,Australia,Heron Island,Apr-14,MW1,1,0.0222,26.25,25,36.5,8.18,1.3333320000000002,double,3.5,species,1.08,species,3.66,species
+Sphyraenidae,Sphyraena,Sphyraena barracuda,Bahamas,Cape Eleuthera,Nov-09,Ba1,1,0.691,22.68,27,36.6,NA,27.88185,double,4.5,species,2.45,species,6.65,species
+Lutjanidae,Lutjanus,Lutjanus apodus,Bahamas,Cape Eleuthera,Nov-09,Sch1,3,0.247,22.92,27,36.6,NA,10.633349999999998,double,3.76,species,1.78,species,2.8,species
+Lutjanidae,Lutjanus,Lutjanus apodus,Bahamas,Cape Eleuthera,Nov-09,Sch2,4,0.1193,22.67,27,36.6,NA,7.20572,double,3.76,species,1.78,species,2.8,species
+Lutjanidae,Ocyurus,Ocyurus chrysurus,Bahamas,Cape Eleuthera,Nov-09,YtS1,10,0.0452,22.68,27,36.6,NA,2.0299319999999996,double,3.88,species,1.74,species,2.6,species
+Haemulidae,Haemulon,Haemulon sp.,Bahamas,Cape Eleuthera,Nov-09,Grunt1,1,0.101,22.67,27,36.6,NA,5.62469,double,3.67,genus,2.29,genus,2.99,genus
+Sphyraenidae,Sphyraena,Sphyraena barracuda,Bahamas,Cape Eleuthera,Nov-09,Ba2,1,0.491,22.68,27,36.6,NA,5.07203,double,4.5,species,2.45,species,6.65,species
+Gerreidae,Gerres,Gerres cinereus,Bahamas,Cape Eleuthera,Nov-09,YfM1,2,0.1725,22.68,27,36.6,NA,10.7985,double,3.2,species,2.46,species,2.49,species
+Serranidae,Epinephelus,Epinephelus guttatus,Bahamas,Cape Eleuthera,Nov-09,RH1,1,0.205,45.75,27,36.6,NA,4.9117999999999995,double,4.15,species,0.98,species,3,species
+Lutjanidae,Lutjanus,Lutjanus apodus,Bahamas,Cape Eleuthera,Nov-09,Sch3,3,0.2897,45.77,27,36.6,NA,9.209563,double,3.76,species,1.78,species,2.8,species
+Lutjanidae,Ocyurus,Ocyurus chrysurus,Bahamas,Cape Eleuthera,Nov-09,YtS2,4,0.076,70.12,27,36.6,NA,4.3054,double,3.88,species,1.74,species,2.6,species
+Lutjanidae,Lutjanus,Lutjanus apodus,Bahamas,Cape Eleuthera,Nov-09,Sch4,13,0.0099,72.9,27,36.6,NA,0.7305210000000001,double,3.76,species,1.78,species,2.8,species
+Lutjanidae,Lutjanus,Lutjanus apodus,Bahamas,Cape Eleuthera,Nov-09,Sch5,3,0.1037,72.08,27,36.6,NA,5.344698,double,3.76,species,1.78,species,2.8,species
+Serranidae,Cephalopholis,Cephalopholis cruentata,Bahamas,Cape Eleuthera,Nov-09,GG1,3,0.0947,45.67,27,36.6,NA,3.054075,double,4.16,species,2.43,species,2.78,species
+Lutjanidae,Ocyurus,Ocyurus chrysurus,Bahamas,Cape Eleuthera,Nov-09,YtS3,6,0.0233,70.07,27,36.6,NA,0.7877730000000001,double,3.88,species,1.74,species,2.6,species
+Scorpaenidae,Pterois,Pterois volitans,Bahamas,Cape Eleuthera,Nov-09,RLf1,3,0.0313,71.05,27,36.6,NA,1.428845,double,3.44,species,1.1,species,2.87,species
+Scorpaenidae,Pterois,Pterois volitans,Bahamas,Cape Eleuthera,Nov-09,RLf2,1,0.057,72.27,27,36.6,NA,0.95475,double,3.44,species,1.1,species,2.87,species
+Mugilidae,Mugil,Mugil sp.,Bahamas,Cape Eleuthera,Nov-09,Mullet1,9,0.003,24,27,36.6,NA,0.1977,double,2.24,genus,2.18,genus,4.2,genus
+Serranidae,Cephalopholis,Cephalopholis cruentata,Bahamas,Cape Eleuthera,Nov-09,GG2,4,0.1415,47.17,27,36.6,NA,3.5459899999999993,double,4.16,species,2.43,species,2.78,species
+Serranidae,Cephalopholis,Cephalopholis cruentata,Bahamas,Cape Eleuthera,Nov-09,GG3,4,0.0758,47.13,27,36.6,NA,3.3844700000000003,double,4.16,species,2.43,species,2.78,species
+Scorpaenidae,Pterois,Pterois volitans,Bahamas,Cape Eleuthera,Nov-09,RLf3,2,0.311,22.78,27,36.6,NA,1.1818,double,3.44,species,1.1,species,2.87,species
+Lutjanidae,Ocyurus,Ocyurus chrysurus,Bahamas,Cape Eleuthera,Nov-09,YtS4,5,0.6948,48,27,36.6,NA,5.579243999999999,double,3.88,species,1.74,species,2.6,species
+Sphyraenidae,Sphyraena,Sphyraena barracuda,Bahamas,Cape Eleuthera,Nov-09,Ba3,1,1.259,48,27,36.6,NA,16.039659999999998,double,4.5,species,2.45,species,6.65,species
+Sphyraenidae,Sphyraena,Sphyraena barracuda,Bahamas,Cape Eleuthera,Nov-09,Ba4,1,11.364,20,27,36.6,NA,297.05496000000005,double,4.5,species,2.45,species,6.65,species
+Albulidae,Albula,Albula vulpes,Bahamas,Cape Eleuthera,Nov-09,Bon1,5,1.0058,25.73,27,36.6,NA,12.461862000000002,double,3.66,species,2.41,species,4.28,species
+Acanthuridae,Acanthurus,Acanthurus nigrofuscus,Palau,Koror,Nov-19,P02,1,0.02,48,30.23,33.83,8.04,0.4525427083333333,single,2,species,1.82,species,1.99,species
+Chaetodontidae,Chaetodon,Chaetodon lunulatus,Palau,Koror,Nov-19,P07,1,0.0236,48,30.23,33.83,8.04,0.9050729166666668,single,3.34,species,2.47,species,1.63,species
+Blenniidae,Salarias,Salarias fasciatus,Palau,Koror,Nov-19,P09,1,0.0305,48,30.23,33.83,8.04,0.6141145833333334,single,2,species,0.9,species,3.3,species
+Gobiidae,Valenciennea,Valenciennea longipinnis,Palau,Koror,Dec-19,P100,1,0.0059,56,30.23,33.83,8.04,0.185484375,single,3.38,genus,0.76,species,4.97,species
+Lutjanidae,Lutjanus,Lutjanus gibbus,Palau,Koror,Dec-19,P104,1,0.041,24,30.23,33.83,8.04,1.150625,single,3.63,species,2.16,species,2.39,species
+Pomacentridae,Dischistodus,Dischistodus perspicillatus,Palau,Koror,Nov-19,P11,1,0.0438,60,30.23,33.83,8.04,1.29975,single,2,species,1.6,species,2.18,species
+Apogonidae,Sphaeramia,Sphaeramia orbicularis,Palau,Koror,Nov-19,P12,3,0.0077,60,30.23,33.83,8.04,0.30036111111111113,single,3.64,species,1.63,species,1.83,species
+Holocentridae,Myripristis,Myripristis adusta,Palau,Koror,Nov-19,P13,3,0.0036,60,30.23,33.83,8.04,0.0987709722222222,single,3.4,species,2.3,species,2.33,species
+Apogonidae,Sphaeramia,Sphaeramia orbicularis,Palau,Koror,Nov-19,P14,3,0.00709999999999999,60,30.23,33.83,8.04,0.4390972222222222,single,3.64,species,1.63,species,1.83,species
+Apogonidae,Sphaeramia,Sphaeramia orbicularis,Palau,Koror,Nov-19,P15,3,0.0127,60,30.23,33.83,8.04,0.4014166666666667,single,3.64,species,1.63,species,1.83,species
+Pomacentridae,Amblyglyphidodon,Amblyglyphidodon curacao,Palau,Koror,Dec-19,P16,3,0.008,64,30.23,33.83,8.04,0.07421354166666667,single,3.1,species,1.41,species,1.71,species
+Pomacentridae,Amblyglyphidodon,Amblyglyphidodon curacao,Palau,Koror,Dec-19,P17,5,0.0042,56,30.23,33.83,8.04,0.0550625,single,3.1,species,1.41,species,1.71,species
+Pomacentridae,Amblyglyphidodon,Amblyglyphidodon curacao,Palau,Koror,Dec-19,P18,3,0.0134,48,30.23,33.83,8.04,0.03534722222222222,single,3.1,species,1.41,species,1.71,species
+Serranidae,Cephalopholis,Cephalopholis urodeta,Palau,Koror,Dec-19,P19,1,0.0174,64,30.23,33.83,8.04,1.33378828125,single,4.02,species,1.5,species,3.03,species
+Pomacentridae,Chromis,Chromis atripectoralis,Palau,Koror,Dec-19,P20,6,0.0047,56,30.23,33.83,8.04,0.13267559523809525,single,3.08,genus,2.26,species,2.07,species
+Pomacentridae,Chromis,Chromis atripectoralis,Palau,Koror,Dec-19,P21,5,0.0059,64,30.23,33.83,8.04,0.07385312499999999,single,3.08,genus,2.26,species,2.07,species
+Pomacentridae,Pomacentrus,Pomacentrus bankanensis,Palau,Koror,Dec-19,P22,1,0.0056,56,30.23,33.83,8.04,0.13216071428571427,single,2.7,genus,1.65,species,2.05,species
+Acanthuridae,Acanthurus,Acanthurus nigrofuscus,Palau,Koror,Dec-19,P23,3,0.003,56,30.23,33.83,8.04,0.02615178571428571,single,2,species,1.82,species,1.99,species
+Pomacentridae,Dischistodus,Dischistodus perspicillatus,Palau,Koror,Dec-19,P24,1,0.0237,56,30.23,33.83,8.04,0.30589285714285713,single,2,species,1.6,species,2.18,species
+Apogonidae,Sphaeramia,Sphaeramia nematoptera,Palau,Koror,Dec-19,P25,3,0.0085,64,30.23,33.83,8.04,0.35979479166666667,single,3.22,species,1.18,species,1.91,species
+Labridae,Scarus,Scarus globiceps,Palau,Koror,Dec-19,P26,1,0.1772,48,30.23,33.83,8.04,10.116538020833334,single,2,species,1.53,species,2.76,species
+Pomacentridae,Chromis,Chromis atripectoralis,Palau,Koror,Dec-19,P27,5,0.0031,56,30.23,33.83,8.04,0.05129464285714286,single,3.08,genus,2.26,species,2.07,species
+Nemipteridae,Scolopsis,Scolopsis margaritifera,Palau,Koror,Dec-19,P28,1,0.044,56,30.23,33.83,8.04,0.44424107142857144,single,3.6,species,2.63,species,2.47,species
+Gobiidae,Cryptocentrus,Cryptocentrus cinctus,Palau,Koror,Dec-19,P34,1,0.0016,48,30.23,33.83,8.04,0.03279166666666667,single,2.97,genus,0.77,species,4.58,species
+Gobiidae,Amblygobius,Amblygobius semicinctus,Palau,Koror,Dec-19,P35,1,0.0073,48,30.23,33.83,8.04,0.5351041666666666,single,2.73,genus,0.79,species,3.29,species
+Gobiidae,Amblygobius,Amblygobius semicinctus,Palau,Koror,Dec-19,P36,2,0.0028,48,30.23,33.83,8.04,0.09447916666666668,single,2.73,genus,0.79,species,3.29,species
+Gobiidae,Amblygobius,Amblygobius semicinctus,Palau,Koror,Dec-19,P37,1,0.00819999999999999,48,30.23,33.83,8.04,0.5208859375,single,2.73,genus,0.79,species,3.29,species
+Apogonidae,Ostorhinchus,Ostorhinchus novemfasciatus,Palau,Koror,Dec-19,P38,1,0.00819999999999999,64,30.23,33.83,8.04,0.798561328125,single,4,species,1.27,species,2.97,species
+Gobiidae,Valenciennea,Valenciennea longipinnis,Palau,Koror,Dec-19,P40,1,0.0054,48,30.23,33.83,8.04,0.3115104166666666,single,3.38,genus,0.76,species,4.97,species
+Apogonidae,Ostorhinchus,Ostorhinchus novemfasciatus,Palau,Koror,Dec-19,P41,1,0.00709999999999999,64,30.23,33.83,8.04,0.77029375,single,4,species,1.27,species,2.97,species
+Apogonidae,Pristiapogon,Pristiapogon exostigma,Palau,Koror,Dec-19,P42,1,0.0047,48,30.23,33.83,8.04,0.3567229166666667,single,3.72,species,1.23,species,3.26,species
+Apogonidae,Ostorhinchus,Ostorhinchus novemfasciatus,Palau,Koror,Dec-19,P43,1,0.0079,64,30.23,33.83,8.04,0.936588671875,single,4,species,1.27,species,2.97,species
+Balistidae,Rhinecanthus,Rhinecanthus verrucosus,Palau,Koror,Dec-19,P44,1,0.0998,48,30.23,33.83,8.04,0.49713541666666666,single,3.36,genus,1.76,species,2.08,species
+Balistidae,Rhinecanthus,Rhinecanthus verrucosus,Palau,Koror,Dec-19,P45,1,0.1058,48,30.23,33.83,8.04,0.78703125,single,3.36,genus,1.76,species,2.08,species
+Pomacentridae,Dischistodus,Dischistodus perspicillatus,Palau,Koror,Dec-19,P46,1,0.0155,48,30.23,33.83,8.04,0.34203125,single,2,species,1.6,species,2.18,species
+Chaetodontidae,Chaetodon,Chaetodon ephippium,Palau,Koror,Dec-19,P47,1,0.1173,48,30.23,33.83,8.04,1.8102083333333336,single,3.01,species,2.21,species,1.6,species
+Chaetodontidae,Chaetodon,Chaetodon ephippium,Palau,Koror,Dec-19,P48,1,0.0716,48,30.23,33.83,8.04,1.0740166666666666,single,3.01,species,2.21,species,1.6,species
+Pomacentridae,Dischistodus,Dischistodus perspicillatus,Palau,Koror,Dec-19,P49,1,0.0557,48,30.23,33.83,8.04,0.7878645833333334,single,2,species,1.6,species,2.18,species
+Acanthuridae,Zebrasoma,Zebrasoma scopas,Palau,Koror,Dec-19,P50,1,0.0214,48,30.23,33.83,8.04,0.84040625,single,2,species,2.02,species,1.74,species
+Mullidae,Parupeneus,Parupeneus barberinus,Palau,Koror,Dec-19,P54,1,0.08059999999999999,48,30.23,33.83,8.04,2.6361979166666667,single,3.44,species,2.79,species,3.52,species
+Holocentridae,Myripristis,Myripristis violacea,Palau,Koror,Dec-19,P55,1,0.08059999999999999,48,30.23,33.83,8.04,0.3285057291666667,single,3.45,species,2.28,species,2.33,species
+Holocentridae,Myripristis,Myripristis violacea,Palau,Koror,Dec-19,P57,1,0.05,48,30.23,33.83,8.04,3.0794791666666668,single,3.45,species,2.28,species,2.33,species
+Acanthuridae,Zebrasoma,Zebrasoma velifer,Palau,Koror,Dec-19,P58,1,0.08109999999999999,40,30.23,33.83,8.04,1.481025,single,2,species,1.93,species,1.82,species
+Holocentridae,Sargocentron,Sargocentron spiniferum,Palau,Koror,Dec-19,P60,1,0.1403,48,30.23,33.83,8.04,3.719635416666667,single,3.8,species,2.24,species,2.46,species
+Labridae,Scarus,Scarus scaber,Palau,Koror,Dec-19,P61,1,0.16019999999999998,48,30.23,33.83,8.04,0.6422395833333333,single,2,species,1.86,species,2.86,species
+Acanthuridae,Naso,Naso vlamingii,Palau,Koror,Dec-19,P63,1,0.1301,40,30.23,33.83,8.04,0.2807575,single,2.16,species,2.39,species,2.55,species
+Acanthuridae,Naso,Naso annulatus,Palau,Koror,Dec-19,P65,1,0.0631,62,30.23,33.83,8.04,0.1805483870967742,single,2.12,species,2.67,species,2.54,species
+Siganidae,Siganus,Siganus doliatus,Palau,Koror,Dec-19,P67,1,0.073,64,30.23,33.83,8.04,0.83115546875,single,2,species,2.33,species,1.97,species
+Siganidae,Siganus,Siganus puellus,Palau,Koror,Dec-19,P68,1,0.0881,58,30.23,33.83,8.04,0.2318323275862069,single,3,species,2.05,species,2.5,species
+Labridae,Scarus,Scarus dimidiatus,Palau,Koror,Dec-19,P69,1,0.1243,58,30.23,33.83,8.04,0.4655086206896552,single,2,species,1.28,species,3.02,species
+Labridae,Scarus,Scarus dimidiatus,Palau,Koror,Dec-19,P70,1,0.1891,58,30.23,33.83,8.04,1.2173435344827586,single,2,species,1.28,species,3.02,species
+Labridae,Scarus,Scarus scaber,Palau,Koror,Dec-19,P71,1,0.1195,58,30.23,33.83,8.04,2.857575,single,2,species,1.86,species,2.86,species
+Pseudochromidae,Pseudochromis,Pseudochromis marshallensis,Palau,Koror,Dec-19,P72,1,0.0032,64,30.23,33.83,8.04,0.209325,single,3.47,genus,1.22,genus,3.66,genus
+Pseudochromidae,Pseudochromis,Pseudochromis fuscus,Palau,Koror,Dec-19,P73,1,0.0049,50,30.23,33.83,8.04,0.317287,single,3.47,genus,1.23,species,2.95,species
+Blenniidae,Salarias,Atrosalarias fuscus,Palau,Koror,Dec-19,P75,1,0.004,48,30.23,33.83,8.04,0.20791666666666667,single,2,species,0.89,species,2.71,species
+Blenniidae,Salarias,Salarias ceramensis,Palau,Koror,Dec-19,P76,1,0.02389999999999999,58,30.23,33.83,8.04,0.2299099137931035,single,2,species,1.09,species,2.42,species
+Blenniidae,Salarias,Salarias ceramensis,Palau,Koror,Dec-19,P77,1,0.0154,64,30.23,33.83,8.04,0.79184453125,single,2,species,1.09,species,2.42,species
+Blenniidae,Salarias,Atrosalarias fuscus,Palau,Koror,Dec-19,P78,1,0.0103,58,30.23,33.83,8.04,0.33245689655172417,single,2,species,0.89,species,2.71,species
+Blenniidae,Salarias,Salarias ceramensis,Palau,Koror,Dec-19,P79,1,0.0091,58,30.23,33.83,8.04,0.32896551724137935,single,2,species,1.09,species,2.42,species
+Serranidae,Epinephelus,Epinephelus merra,Palau,Koror,Dec-19,P80,1,0.0476,72,30.23,33.83,8.04,3.023975,single,4.38,species,1.5,species,2.98,species
+Serranidae,Epinephelus,Epinephelus merra,Palau,Koror,Dec-19,P81,1,0.0348,64,30.23,33.83,8.04,4.183118359375,single,4.38,species,1.5,species,2.98,species
+Haemulidae,Plectorhinchus,Plectorhinchus lineatus,Palau,Koror,Dec-19,P82,1,0.0126,64,30.23,33.83,8.04,0.78699296875,single,3.88,species,1.88,species,2.82,species
+Siganidae,Siganus,Siganus punctatus,Palau,Koror,Dec-19,P83,1,0.244,64,30.23,33.83,8.04,12.655024609375,single,2,species,2.91,species,2.1,species
+Zanclidae,Zanclus,Zanclus cornutus,Palau,Koror,Dec-19,P85,1,0.084,64,30.23,33.83,8.04,0.6750046875,single,2.49,species,2.27,species,1.15,species
+Tetraodontidae,Arothron,Arothron nigropunctatus,Palau,Koror,Dec-19,P86,1,0.189,64,30.23,33.83,8.04,10.95265625,single,3.07,species,1.08,species,2.24,species
+Tetraodontidae,Arothron,Arothron nigropunctatus,Palau,Koror,Dec-19,P87,1,0.3388,64,30.23,33.83,8.04,29.08203125,single,3.07,species,1.08,species,2.24,species
+Chaetodontidae,Chaetodon,Chaetodon oxycephalus,Palau,Koror,Dec-19,P88,1,0.088,64,30.23,33.83,8.04,0.27367109375,single,3.48,species,2.39,species,1.83,species
+Pomacanthidae,Pygoplites,Pygoplites diacanthus,Palau,Koror,Dec-19,P89,1,0.1273,64,30.23,33.83,8.04,2.97140625,single,2.69,species,1.51,species,1.81,species
+Chaetodontidae,Chaetodon,Chaetodon oxycephalus,Palau,Koror,Dec-19,P90,1,0.1106,48,30.23,33.83,8.04,0.133984375,single,3.48,species,2.39,species,1.83,species
+Muraenidae,Gymnothorax,Gymnothorax javanicus,Palau,Koror,Dec-19,P91,1,1.157,64,30.23,33.83,8.04,54.487659375,single,3.87,species,0,family,12.16,species
+Holocentridae,Sargocentron,Sargocentron spiniferum,Palau,Koror,Dec-19,P94,1,0.456,72,30.23,33.83,8.04,21.130694444444444,single,3.8,species,2.24,species,2.46,species
+Gobiidae,Amblygobius,Amblygobius phalaena,Palau,Koror,Dec-19,P95,1,0.003,48,30.23,33.83,8.04,0.1459609375,single,2.74,species,0.85,species,3.7,species
+Gobiidae,Asterropteryx,Asterropteryx semipunctata,Palau,Koror,Dec-19,P96,5,7e-4,48,30.23,33.83,8.04,0.010953125,single,2.36,species,1.08,species,3.28,species
+Gobiidae,Valenciennea,Valenciennea longipinnis,Palau,Koror,Dec-19,P99,1,0.0056,64,30.23,33.83,8.04,0.562883984375,single,3.38,genus,0.76,species,4.97,species

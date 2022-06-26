@@ -1,0 +1,3 @@
+model,fixed,random,sigma,elpd_diff,se_diff,looic,se_looic
+m_caco3_sigma,log(M) + log(RIL) + T + sqrt(AR),family,method,0,0,451.27,36.7
+m_caco3,log(M) + log(RIL) + T + sqrt(AR),family,-,-16.92,7.61,485.11,36.03

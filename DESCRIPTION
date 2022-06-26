@@ -1,0 +1,46 @@
+Package: FishCaCO3Model
+Title: Data and code for Ghilardi et al. (202*) Add title. Add Journal.
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Mattia",
+           family = "Ghilardi",
+           role = c("aut", "cre"),
+           email = "mattia.ghilardi91@gmail.com",
+           comment = c(ORCID = "https://orcid.org/0000-0001-9592-7252"))
+Description: Provides data and code to reproduce figures and results of Ghilardi et al. (202*) Add title. Add Journal.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Imports: 
+    ape (>= 5.5),
+    bayesplot (>= 1.8.1),
+    brms (>= 2.15.0),
+    car (>= 3.0.11),
+    devtools (>= 2.4.2),
+    dplyr (>= 1.0.7),
+    fishflux (>= 0.0.1.4),
+    fishtree (>= 0.3.4),
+    GGally (>= 2.1.2),
+    ggplot2 (>= 3.3.5),
+    ggpubr (>= 0.4.0),
+    ggtext (>= 0.1.1),
+    glue (>= 1.6.2),
+    here (>= 1.0.1),
+    insight (>= 0.14.4),
+    knitr (>= 1.33),
+    magrittr (>= 2.0.1),
+    MCMCglmm (>= 2.32),
+    modelr (>= 0.1.8),
+    parallel (>= 4.1.3),
+    picante (>= 1.8.2),
+    RColorBrewer (>= 1.1.2),
+    readr (>= 2.0.1),
+    rfishbase (>= 3.1.9),
+    rlang (>= 0.4.11),
+    rmarkdown (>= 2.10),
+    stringr (>= 1.4.0),
+    tibble (>= 3.1.3),
+    tidybayes (>= 3.0.0),
+    tidyr (>= 1.1.3)

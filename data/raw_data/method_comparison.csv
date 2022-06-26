@@ -1,0 +1,13 @@
+Family,Species,Sample ID,Composition,End point titration,Double titration,Ratio
+Lethrinidae,Lethrinus atkinsoni,EMP/B-P4,"HMC, ARA, ACMC",0.1294,0.1134,1.141093474
+Lethrinidae,Lethrinus atkinsoni,EMP/B-P3,"HMC, ARA, ACMC",0.2256,0.212,1.064150943
+Lethrinidae,Lethrinus atkinsoni,EMP/B-P2,"HMC, ARA, ACMC",0.1716,0.1581,1.085388994
+Lethrinidae,Lethrinus atkinsoni,EMP/B-P1,"HMC, ARA, ACMC",0.109,0.0984,1.107723577
+Serranidae,Cephalopholis cyanostigma,CM/A-P4,HMC,0.5384,0.5163,1.042804571
+Serranidae,Cephalopholis cyanostigma,CM/A-P3,HMC,0.3352,0.31356,1.069013905
+Serranidae,Cephalopholis cyanostigma,CM/A-P2,HMC,0.4746,0.45063,1.053192198
+Serranidae,Cephalopholis cyanostigma,CM/A-P1,HMC,0.4248,0.40107,1.059166729
+Lutjanidae,Lutjanus fulvus,SN/C-G-P4,HMC,0.1936,0.17748,1.090827135
+Lutjanidae,Lutjanus fulvus,SN/C-G-P3,HMC,0.2508,0.23395,1.072023937
+Lutjanidae,Lutjanus fulvus,SN/C-G-P2,HMC,0.3288,0.3084,1.06614786
+Lutjanidae,Lutjanus fulvus,SN/C-G-P1,HMC,0.2764,0.25888,1.067676143
