@@ -309,4 +309,7 @@ round(fixef(m3_caco3_comp) %>%
 # Mumolh_scalelog_weight      1.40      0.19 1.04  1.78
 # ACumolh_scalelog_weight     0.89      0.13 0.64  1.14
 
+rm(m1_caco3_comp, m2_caco3_comp)
+gc()
+
 #########################################################################################

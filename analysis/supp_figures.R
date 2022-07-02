@@ -125,7 +125,7 @@ rm(df, figS4)
 # Plot average carbonate composition by family
 
 # Get family-level traits
-fam_traits <- family_traits(unique(caco3_comp$family), type = "food items", mc.cores = 4)
+fam_traits <- family_traits(unique(caco3_comp$family), type = "food items")
 
 # Average adult (1/2 max length) biomass for each family
 taxo <- rfishbase::load_taxa() %>%

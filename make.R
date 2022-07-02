@@ -26,7 +26,7 @@ dir.create(here::here("outputs", "models"))
 source(here::here("analysis", "1_FB_traits.R"))
 
 # 2 - intestine extrapolation
-source(here::here("analysis", "2_extrapolation_intestine_length.R"))
+source(here::here("analysis", "2_extrapolation_intestinal_length.R"))
 
 # 3 - CaCO3 excretion
 source(here::here("analysis", "3_modelling_caco3_exc_rates.R"))
