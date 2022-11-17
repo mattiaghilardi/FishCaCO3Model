@@ -5,7 +5,7 @@
 # 1 - Fit Bayesian phylogenetic model with data published in
 #     Ghilardi et al. (2021) Phylogeny, body morphology, and trophic level
 #     shape intestinal traits in coral reef fishes. Ecol. Evol.
-# 2 - Validate model using an independent dataset
+# 2 - Validate model
 # 3 - Extrapolate intestinal length for taxa in the carbonate dataset,
 #     both fishes identified at the species or genus level, using
 #     ancestral state reconstruction of the phylogenetic effect
@@ -13,7 +13,6 @@
 #########################################################################################
 #### Load data
 int_moor <- readr::read_csv(here::here("data", "raw_data", "intestine_fish_Moorea.csv"))
-int_man_tet <- readr::read_csv(here::here("data", "raw_data", "intestine_fish_Man_Tet.csv"))
 data_caco3_FB_traits <- readr::read_csv(here::here("data", "derived_data", "data_caco3_FB_traits.csv"))
 
 #########################################################################################
@@ -164,182 +163,60 @@ rm(corphy_int, corphy_int_m, tree_int, prior_int)
 #########################################################################################
 #### Model validation
 
-# Predict intestinal length of fishes in the independent dataset from Mangareva and Tetiaroa
-# First check species names
-fishflux::name_errors(unique(int_man_tet$species)) # ok
+# Exclude one species per time from the model and predict intestinal length for all individuals
+# of this species in the dataset.
 
-# Get fish traits
-# TROPHIC LEVEL
-troph_man_tet <- trophic_level_FB(unique(int_man_tet$species), type = "food items") %>%
-  dplyr::rename(level_troph = taxon_level)
-filter(troph_man_tet, is.na(trophic_level)) # no NAs
-
-# ELONGATION
-elon_man_tet <- elongation_FB(unique(int_man_tet$species)) %>%
-  dplyr::rename(level_elon = taxon_level)
-filter(elon_man_tet, is.na(elongation)) # no NAs
-
-# Join traits to the dataset
-int_man_tet <- left_join(int_man_tet, troph_man_tet) %>% left_join(elon_man_tet)
-
-rm(troph_man_tet, elon_man_tet)
-
-# Add column "phylo" to the dataset
-int_man_tet$phylo <- gsub(" ", "_", int_man_tet$species)
-
-# Add unobserved taxa in Moorea
-# Remove one observation from "Chanos chanos" as this is likely an outlier
-int_man_tet <- int_man_tet %>%
-  bind_rows(int_moor %>%
-              mutate(species = recode(species, "Ostracion cubicum" = "Ostracion cubicus")) %>%
-              filter((!species %in% int_moor_f$species) & (family != "Chanidae")) %>%
-              select(1:21) %>%
-              mutate(phylo = gsub(" ", "_", species))
-            )
-
-# Data transformation
-int_man_tet <- int_man_tet %>%
-  mutate(il_log = log(intestine_length),
-         sl_log = log(sl),
-         elon_log = log(elongation))
-
-# Add a column to identify individuals of observed taxa (taxa used to train the model) and unobserved taxa
-int_man_tet <- int_man_tet %>%
-  mutate(obs = if_else(species %in% int_moor_f$species, "observed", "unobserved"))
-
-int_man_tet %>% group_by(obs) %>% count()
-# observed     338
-# unobserved    76
-
-rm(int_moor)
-
-# Now we can predict intestinal length
-
-# It is possible to predict directly with "predict.brmsfit()" by setting "allow_new_levels = TRUE",
-# this include the uncertainty associated with the random intercept in the prediction,
-# but does not account for the phylogenetic structure.
-
-predict(m_intestine, newdata = int_man_tet, allow_new_levels = TRUE) %>%
-  as_tibble() %>%
-  bind_cols(int_man_tet) %>%
-  group_by(obs) %>%
-  mutate(nobs = n(),
-         label = paste0(obs, " (", nobs, ")")) %>%
-  ggplot(aes(x = Estimate, y = il_log, color = label, fill = label)) +
-  geom_point(size = 1.5, alpha = 0.5, stroke = 0.1, show.legend = FALSE) +
-  geom_abline(linetype = 2, color = "red", size = 0.7) +
-  geom_smooth(method = "lm", size = 0.7, alpha = 0.3) +
-  scale_color_viridis_d(option = "C", end = 0.8) +
-  scale_fill_viridis_d(option = "C", end = 0.8) +
-  stat_regline_equation(aes(label =  paste(..eq.label.., ..rr.label.., sep = "~~~~")),
-                        family = "serif", show.legend = FALSE, size = 3) +
-  labs(x = "Predicted"~italic(ln)~"int. length (mm)",
-       y = "Observed"~italic(ln)~"int. length (mm)") +
-  theme(text = element_text(size = 10),
-        legend.title = element_blank(),
-        legend.position = c(0.8, 0.2))
-
-# As expected, while predictions are very good for observed taxa (R2=0.9, b=1, a=-0.27)
-# they are less accurate for unobserved taxa (R2=0.73, b=1.2, a=-1.4)
-
-ggsave(here::here("outputs", "figures", "int_validation_observed_brms.png"),
-       width = 10, height = 7, units = "cm", dpi = 600, type = "cairo")
-
-# In order to account for the phylogeny we first need to estimate the phylogenetic effect for the unobserved taxa,
+# To account for the phylogeny we first need to estimate the phylogenetic effect for the unobserved taxa,
 # which can be done through ancestral state reconstruction (see function "phylo_effect()",
 # following Parravicini et al. 2020 https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3000702),
 # then the intestinal length of unobserved taxa can be predicted (see function "intestinal_length()").
 
 # Predict intestinal length
-int_man_tet_pred <- intestinal_length(data = int_man_tet, ndraw = 2000)
+pb <- progress::progress_bar$new(
+  format = "[:bar] :current/:total [:percent]",
+  total = length(sp_list))
 
-# Plot observed vs predicted
-left_join(int_man_tet, int_man_tet_pred) %>%
-  group_by(obs) %>%
-  mutate(nobs = n(),
-         label = paste0(obs, " (", nobs, ")")) %>%
-  ggplot(aes(x = int_length, y = il_log, color = label, fill = label)) +
-  geom_point(size = 1.5, alpha = 0.5, stroke = 0.1, show.legend = FALSE) +
-  geom_abline(linetype = 2, color = "red", size = 0.7) +
-  geom_smooth(method = "lm", size = 0.7, alpha = 0.3) +
-  scale_color_viridis_d(option = "C", end = 0.8) +
-  scale_fill_viridis_d(option = "C", end = 0.8) +
-  stat_regline_equation(aes(label =  paste(..eq.label.., ..rr.label.., sep = "~~~~")),
-                        family = "serif", show.legend = FALSE, size = 3) +
-  labs(x = "Predicted"~italic(ln)~"int. length (mm)",
-       y = "Observed"~italic(ln)~"int. length (mm)") +
-  theme(text = element_text(size = 10),
-        legend.title = element_blank(),
-        legend.position = c(0.8, 0.2))
+test_extrapolation <- function(){
+  pb$tick(0)
+  Sys.sleep(1 / 100)
+  lapply(1:length(sp_list), function(x) {
+    df <- filter(int_moor_f, species == sp_list[x])
+    pred <- test_intestinal_length(data = df, ndraws = 2000)
+    pb$tick(1)
+    Sys.sleep(1 / 100)
+    suppressMessages(left_join(df, pred))
+  }) %>%
+    bind_rows()
+}
 
-# Predictions for unobserved taxa have improved (R2=0.75, b=1.1, -0.89)
+int_pred <- test_extrapolation()
 
-ggsave(here::here("outputs", "figures", "int_validation_observed.png"),
+rm(pb, test_extrapolation)
+
+plot_obs_vs_pred(data = int_pred,
+                 pred = "int_length", obs = "il_log",
+                 xlab = "Predicted"~italic(ln)~"int. length (mm)",
+                 ylab = "Observed"~italic(ln)~"int. length (mm)",
+                 point_size = 1.5,
+                 text_size = 4)
+
+# Predictions for unobserved species are quite accurate (R2=0.81, b=1, a=-0.16)
+
+ggsave(here::here("outputs", "figures", "int_validation_species.png"),
        width = 10, height = 7, units = "cm", dpi = 600, type = "cairo")
 
-# Overall relationship
-summary(lm(il_log ~ int_length, data = left_join(int_man_tet, int_man_tet_pred)))
-# R2=0.88, b=1.08, -0.45
-
 # Check number of observations that fall within the 95% CI of the predictions
-left_join(int_man_tet, int_man_tet_pred) %>%
+int_pred %>%
   mutate(check = ifelse(il_log >= .lower & il_log <= .upper, 1, 0)) %>%
-  group_by(obs) %>%
   count(check) %>%
   mutate("%" = n/sum(n)*100)
-# obs        check     n    `%`
-# observed       0   225  66.6
-# observed       1   113  33.4
-# unobserved     0    64  84.2
-# unobserved     1    12  15.8
-# ~30% of all predictions fall within the 95% CI
+# check     n   `%`
+#     0   903  74.8
+#     1   305  25.2
+# ~25% of all predictions fall within the 95% CI
 # Here, we are not incorporating the residual error in the prediction,
 # which is instead done in "brms::predict.brmsfit()",
 # thus our predictions are equivalent to "brms::fitted.brmsfit()"
-
-# Furthermore, less accurate estimates for individuals of observed species
-# may be the result of intraspecific variability as fish were collected in other locations
-# Check this
-# Plot observed vs predicted for observed taxa only
-# Separate the two locations
-left_join(int_man_tet, int_man_tet_pred) %>%
-  filter(obs == "observed") %>%
-  group_by(location) %>%
-  mutate(nobs = n(),
-         label = paste0(location, " (", nobs, ")")) %>%
-  ggplot(aes(x = int_length, y = il_log, color = label, fill = label)) +
-  geom_point(size = 1.5, alpha = 0.5, stroke = 0.1, show.legend = FALSE) +
-  geom_abline(linetype = 2, color = "red", size = 0.7) +
-  geom_smooth(method = "lm", size = 0.7, alpha = 0.3) +
-  scale_color_viridis_d(option = "C", end = 0.8) +
-  scale_fill_viridis_d(option = "C", end = 0.8) +
-  stat_regline_equation(aes(label =  paste(..eq.label.., ..rr.label.., sep = "~~~~")),
-                        family = "serif", show.legend = FALSE, size = 3) +
-  labs(x = "Predicted"~italic(ln)~"int. length (mm)",
-       y = "Observed"~italic(ln)~"int. length (mm)") +
-  theme(text = element_text(size = 10),
-        legend.title = element_blank(),
-        legend.position = c(0.8, 0.2))
-
-# Very good (R2=0.9, b=1.1, a=-0.58 for Mangareva, and R2=0.91, b=1, a=0.00016 for Tetiaroa)
-# As expected predictions for Mangareva, which is far from Moorea and presents different environmental conditions,
-# are slightly less accurate, particularly for fish with very long intestines.
-
-ggsave(here::here("outputs", "figures", "int_validation_location.png"),
-       width = 10, height = 7, units = "cm", dpi = 600, type = "cairo")
-
-# Check number of observations that fall within the 95% CI of the predictions
-left_join(int_man_tet, int_man_tet_pred) %>%
-  filter(obs == "observed") %>%
-  mutate(check = ifelse(il_log >= .lower & il_log <= .upper, 1, 0)) %>%
-  group_by(location) %>%
-  count(check) %>%
-  mutate("%" = n/sum(n)*100)
-# location  check     n    `%`
-# Mangareva     0   122  70.1
-# Mangareva     1    52  29.9
-# Tetiaroa      0   103  62.8
-# Tetiaroa      1    61  37.2
 
 #########################################################################################
 #### Validate prediction for species identified at genus level
@@ -417,7 +294,8 @@ ggsave(here::here("outputs", "figures", "int_validation_genus.png"),
 
 # We could also compare them with species-level predictions
 set.seed(98765)
-filter(int_moor_f, !species %in% check_name_fishtree(unique(int_moor_f$species), sampled = TRUE)$not_sampled) %>%
+int_moor_f %>%
+  filter(!species %in% check_name_fishtree(unique(int_moor_f$species), sampled = TRUE)$not_sampled) %>%
   sample_n(200) %>%
   predict(m_intestine, newdata = .) %>%
   cbind(left_join(int_sp, int_sp_pred)) %>%
