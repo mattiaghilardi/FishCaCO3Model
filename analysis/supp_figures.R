@@ -198,12 +198,12 @@ nd <- expand.grid(t = c(20, 25, 30),
 
 nd <- cbind(nd, pred_C(t = nd$t, w = nd$w, ril = nd$ril, ar = nd$ar))
 
-ggplot(nd %>%
-         tidyr::pivot_longer(cols = c(C_wilson_p1, C_ghilardi),
-                             names_to = "var",
-                             values_to = "value") %>%
-         mutate(w = w/1000),
-       aes(x = w, y = value, color = var)) +
+nd %>%
+  tidyr::pivot_longer(cols = c(C_wilson_p1, C_ghilardi),
+                      names_to = "var",
+                      values_to = "value") %>%
+  mutate(w = w/1000) %>%
+  ggplot(aes(x = w, y = value, color = var)) +
   geom_line() +
   facet_wrap(facets = vars(paste("T =", t, "°C"))) +
   scale_color_manual("",
@@ -222,6 +222,33 @@ ggsave(here::here("outputs", "figures", "comparison_with_wilson.pdf"),
 rm(nd)
 
 # Fig. S7
+# Plot temperature effect on carbonate composition
+caco3_comp %>%
+  modelr::data_grid(log_weight = mean(log_weight),
+                    log_ril =  mean(log_ril),
+                    mean_T = modelr::seq_range(mean_T, n = 101),
+                    sqrt_asp_ratio = mean(sqrt_asp_ratio),
+                    method = "double") %>%
+  tidybayes::add_epred_draws(m3_caco3_comp, resp = resp, re_formula = NA) %>%
+  mutate(mineral = factor(.category,
+                          levels = paste0(c("L", "AR", "H", "M", "AC"), "umolh"),
+                          labels = c("LMC", "Aragonite", "HMC", "MHC", "ACMC")
+  )
+  ) %>%
+  ggplot(aes(x = mean_T)) +
+  tidybayes::stat_lineribbon(aes(y = .epred, color = mineral, fill = mineral),
+                             size = 0.5, .width = c(0.5)) +
+  scale_color_viridis_d(option = "C", end = 0.95) +
+  scale_fill_viridis_d(option = "C", end = 0.95, alpha = 0.3) +
+  ylab("Excretion rate (&mu;mol h<sup>-1</sup>)") +
+  xlab("Temperature (°C)") +
+  theme(axis.title.y = ggtext::element_markdown(),
+        legend.title = element_blank())
+
+ggsave(here::here("outputs", "figures", "temp_effect_composition.pdf"),
+       width = 14, height = 10, units = "cm", device = cairo_pdf)
+
+# Fig. S8
 # Sensitivity - Fig. 1
 ggpubr::ggarrange(
   # Fixed effects
@@ -255,7 +282,7 @@ ggpubr::ggarrange(
 ggsave(here::here("outputs", "figures", "sensitivity_fig1.pdf"),
        width = 17, height = 10, units = "cm", device = cairo_pdf)
 
-# Fig. S8
+# Fig. S9
 # Sensitivity - Fig. 3
 ggpubr::ggarrange(
   # Fixed effects lognormal
@@ -343,49 +370,16 @@ ggpubr::ggarrange(
 ggsave(here::here("outputs", "figures", "sensitivity_fig3.pdf"),
        width = 17, height = 10, units = "cm", device = cairo_pdf)
 
-# Fig. S9
-# Plot observed vs predicted intestinal length by observed/unobserved species
-left_join(int_man_tet, int_man_tet_pred) %>%
-  group_by(obs) %>%
-  mutate(nobs = n(),
-         label = paste0(obs, " (", nobs, ")")) %>%
-  ggplot(aes(x = int_length, y = il_log, color = label, fill = label)) +
-  geom_point(size = 1.5, alpha = 0.5, stroke = 0.1, show.legend = FALSE) +
-  geom_abline(linetype = 2, color = "red", size = 0.7) +
-  geom_smooth(method = "lm", size = 0.7, alpha = 0.3) +
-  scale_color_viridis_d(option = "C", end = 0.8) +
-  scale_fill_viridis_d(option = "C", end = 0.8) +
-  ggpubr::stat_regline_equation(aes(label =  paste(..eq.label.., ..rr.label.., sep = "~~~~")),
-                                family = "serif", show.legend = FALSE, size = 4) +
-  labs(x = "Predicted"~italic(ln)~"int. length (mm)",
-       y = "Observed"~italic(ln)~"int. length (mm)") +
-  theme(legend.title = element_blank(),
-        legend.position = c(0.8, 0.2))
-
-ggsave(here::here("outputs", "figures", "int_validation_observed.pdf"),
-       width = 14, height = 10, units = "cm", device = cairo_pdf)
-
 # Fig. S10
-# Plot observed vs predicted intestinal length by location
-left_join(int_man_tet, int_man_tet_pred) %>%
-  filter(obs == "observed") %>%
-  group_by(location) %>%
-  mutate(nobs = n(),
-         label = paste0(location, " (", nobs, ")")) %>%
-  ggplot(aes(x = int_length, y = il_log, color = label, fill = label)) +
-  geom_point(size = 1.5, alpha = 0.5, stroke = 0.1, show.legend = FALSE) +
-  geom_abline(linetype = 2, color = "red", size = 0.7) +
-  geom_smooth(method = "lm", size = 0.7, alpha = 0.3) +
-  scale_color_viridis_d(option = "C", end = 0.8) +
-  scale_fill_viridis_d(option = "C", end = 0.8) +
-  ggpubr::stat_regline_equation(aes(label =  paste(..eq.label.., ..rr.label.., sep = "~~~~")),
-                                family = "serif", show.legend = FALSE, size = 4) +
-  labs(x = "Predicted"~italic(ln)~"int. length (mm)",
-       y = "Observed"~italic(ln)~"int. length (mm)") +
-  theme(legend.title = element_blank(),
-        legend.position = c(0.8, 0.2))
+# Plot observed vs predicted intestinal length at species-level
+int_pred %>%
+  plot_obs_vs_pred(pred = "int_length", obs = "il_log",
+                   xlab = "Predicted"~italic(ln)~"int. length (mm)",
+                   ylab = "Observed"~italic(ln)~"int. length (mm)",
+                   point_size = 1.5,
+                   text_size = 4)
 
-ggsave(here::here("outputs", "figures", "int_validation_location.pdf"),
+ggsave(here::here("outputs", "figures", "int_validation_species.pdf"),
        width = 14, height = 10, units = "cm", device = cairo_pdf)
 
 # Fig. S11
