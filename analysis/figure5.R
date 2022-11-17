@@ -54,13 +54,13 @@ get_upper_tri <- function(m, diag = FALSE){
   m
 }
 
-# Tibble with mean correlations on the lower triangular part
+# Tibble with median correlations on the lower triangular part
 hu_cor_low <- as_tibble(get_lower_tri(hu_cor_mat, diag = TRUE)) %>%
   tidyr::pivot_longer(cols = 1:5, names_to = "var2", values_to = "median") %>%
   mutate(var2 = factor(var2, levels = levels(hu_cor$var2)),
          var1 = factor(rep(levels(var2), each = nlevels(var2)), levels = levels(var2)))
 
-# Tibble with mean and 95% CI on the upper triangular part
+# Tibble with median and 95% CI on the upper triangular part
 hu_cor_up <- as_tibble(get_upper_tri(hu_cor_mat, diag = TRUE)) %>%
   tidyr::pivot_longer(cols = 1:5, names_to = "var2", values_to = "median") %>%
   mutate(var2 = factor(var2, levels = levels(hu_cor$var2)),
@@ -80,12 +80,11 @@ hu_cor_diag <- as_tibble(get_upper_tri(hu_cor_mat)) %>%
 
 # Plot
 fig5 <- ggplot(mapping = aes(x = var1, y = var2)) +
-  geom_point(data = hu_cor_low, aes(size = abs(median), color = median, fill = median), shape = 21) +
+  geom_tile(data = hu_cor_low, aes(fill = median)) +
   scale_fill_gradientn(colors = colorRampPalette(RColorBrewer::brewer.pal(11, "RdBu"))(100),
-                       limits = c(-1, 1), aesthetics = c("fill", "color")) +
-  scale_size_continuous(range = c(2, 12), guide = "none") +
+                       limits = c(-1, 1), na.value = NA) +
   geom_text(data = hu_cor_up,
-            aes(label = label, color = median), size = 4) +
+            aes(label = label), size = 3.5, color = "black") +
   geom_text(data = hu_cor_diag,
             aes(label = name), size = 4, color = "black") +
   theme_void() +
