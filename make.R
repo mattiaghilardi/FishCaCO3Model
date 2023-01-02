@@ -11,7 +11,7 @@ options(FISHBASE_VERSION = "21.04") # set FishBase version
 options(mc.cores = 4) # set number of cores
 
 # Set plot theme
-theme_set(theme_bw(base_size = 12, base_family = "serif") +
+theme_set(theme_bw(base_size = 12, base_family = "sans") +
             theme(panel.grid = element_blank(),
                   axis.text = element_text(color = "black")))
 

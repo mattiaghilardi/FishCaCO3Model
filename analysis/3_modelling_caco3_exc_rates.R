@@ -208,7 +208,7 @@ rm(min, max)
 res_caco3 <- cbind(data_caco3_f_weight, residuals(m_caco3))
 
 ggpubr::ggarrange(p1 = ggplot(res_caco3, aes(x = log(sampling_interval_h), y = Estimate)) +
-                    geom_point() + xlab(italic(ln)~"sampling period (h)") + ylab("residuals") +
+                    geom_point() + xlab("ln sampling period (h)") + ylab("residuals") +
                     ggpubr::stat_cor(family = "serif", r.digits = 1, label.x.npc = "left", label.y.npc = 0.05),
                   p2 = ggplot(res_caco3, aes(x = method, y = Estimate)) +
                     geom_boxplot() + xlab("Methodology") + ylab("") +

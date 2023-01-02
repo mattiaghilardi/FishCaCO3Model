@@ -5,10 +5,10 @@ fig1 <- ggpubr::ggarrange(
   m_caco3_sigma %>%
     tidybayes::gather_draws(b_scalelog_weight, b_scalelog_ril, b_scalemean_T, b_scalesqrt_asp_ratio) %>%
     tidybayes::median_qi(.width = c(.5, .95)) %>%
-    mutate(.variable = case_when(.variable == "b_scalelog_weight" ~ "*ln* Body mass",
-                                 .variable == "b_scalelog_ril" ~ "*ln* Relative<br>intestinal length",
+    mutate(.variable = case_when(.variable == "b_scalelog_weight" ~ "ln Body mass",
+                                 .variable == "b_scalelog_ril" ~ "ln Relative<br>intestinal length",
                                  .variable == "b_scalemean_T" ~ "Temperature",
-                                 .variable == "b_scalesqrt_asp_ratio" ~ "*sqrt* Aspect ratio")) %>%
+                                 .variable == "b_scalesqrt_asp_ratio" ~ "sqrt Aspect ratio")) %>%
     ggplot(aes(y = reorder(as.factor(.variable), .value), x = .value, xmin = .lower, xmax = .upper)) +
     tidybayes::geom_pointinterval(interval_size_range = c(0.5, 1), point_size = 1.2) +
     ylab("") + xlab("Effect size") +

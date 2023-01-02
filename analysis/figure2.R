@@ -184,25 +184,25 @@ fig2[[1]] <- fig2[[1]] +
            color = "#CC0018", size = 3.5, family = "serif", label.color = NA, fill = NA) +
   annotate(geom = "richtext", x = 10, y = 30, label = glue::glue("*&beta;* = {b1w}"),
            size = 3.5, family = "serif", label.color = NA, fill = NA) +
-  add_eq(glue::glue("y = {b0w} · x^*&beta;*"))
+  add_eq(glue::glue("*y* = {b0w} · *x^&beta;*"))
 
 fig2[[2]] <- fig2[[2]] +
-  add_eq(glue::glue("y = {b0t} · e^{b1t}x"))
+  add_eq(glue::glue("*y* = {b0t} · e^{b1t}*x*"))
 
 fig2[[3]] <- fig2[[3]] +
-  add_eq(glue::glue("y = {b0ar} · e^{b1ar}&radic;x"))
+  add_eq(glue::glue("*y* = {b0ar} · e^{b1ar}&radic;*x*"))
 
 fig2[[4]] <- fig2[[4]] +
-  add_eq(glue::glue("y = {b0ril} · x^{b1ril}"))
+  add_eq(glue::glue("*y* = {b0ril} · *x*^{b1ril}"))
 
 # Final plot
 fig2 <- ggpubr::ggarrange(plotlist = fig2, ncol = 2, nrow = 2, align = "hv",
                           labels = letters[1:4], label.x = 0.02)
 
 ggsave(here::here("outputs", "figures", "fig2.png"), fig2,
-       width = 17, height = 14, units = "cm", dpi = 600, type = "cairo")
+       width = 17, height = 15, units = "cm", dpi = 600, type = "cairo")
 ggsave(here::here("outputs", "figures", "fig2.pdf"), fig2,
-       width = 17, height = 14, units = "cm", device = cairo_pdf)
+       width = 17, height = 15, units = "cm", device = cairo_pdf)
 
 rm(nd, y_lab, seed, isometry, dots, dots_iso, add_eq,
    lnb0w, b0w, b1w, b0t, b1t, b0ar, b1ar, b0ril, b1ril)

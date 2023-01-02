@@ -9,7 +9,12 @@ LICENSE](https://img.shields.io/badge/License-MIT%20+%20file%20LICENSE-blue.svg)
 The goal of this project is to reproduce all analyses, figures, and
 tables of the paper
 
-> Add citation
+> Title: Temperature, species identity and morphological traits predict
+> carbonate excretion and mineralogy in tropical reef fishes.
+>
+> Authors: Ghilardi M, Salter MA, Parravicini V, Ferse SCA, Rixen T,
+> Wild C, Birkicht M, Perry, CT, Berry A, Wilson RW, Mouillot D,
+> Bejarano S
 
 ## Content
 
@@ -76,7 +81,7 @@ source("make.R")
 
     #> R version 4.1.3 (2022-03-10)
     #> Platform: x86_64-pc-linux-gnu (64-bit)
-    #> Running under: Ubuntu 20.04.4 LTS
+    #> Running under: Ubuntu 20.04.5 LTS
     #> 
     #> Matrix products: default
     #> BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.9.0

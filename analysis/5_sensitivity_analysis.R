@@ -155,4 +155,7 @@ round(fixef(m3_caco3_comp_corrected) %>%
         filter(endsWith(rownames(.), "_scalelog_weight")) / sd(caco3_comp_corrected$log_weight), 2)
 # No difference
 
+rm(bf_1, bf_2, bf_3, bf_AC, bf_AR, bf_H, bf_L, bf_M)
+gc()
+
 #########################################################################################

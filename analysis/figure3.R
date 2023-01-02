@@ -39,10 +39,10 @@ fig3 <- ggpubr::ggarrange(
                                   interval_size_range = c(0.5, 1), point_size = 1.2) +
     scale_color_viridis_d(option = "C", end = 0.95) +
     labs(title = "Excretion rate", x = "Effect size", y = "") +
-    scale_y_discrete(labels = c("*ln* Relative<br>intestinal length",
-                                "*sqrt* Aspect ratio",
+    scale_y_discrete(labels = c("ln Relative<br>intestinal length",
+                                "sqrt Aspect ratio",
                                 "Temperature",
-                                "*ln* Body mass")
+                                "ln Body mass")
                      ) +
     theme(axis.text.y = ggtext::element_markdown(size = 10),
           plot.title = element_text(face = "bold", size = 12, hjust = 0.5),
@@ -75,7 +75,7 @@ fig3 <- ggpubr::ggarrange(
                                   interval_size_range = c(0.5, 1), point_size = 1.2) +
     scale_color_viridis_d(option = "C", end = 0.95) +
     labs(title = "Probability of excretion", x = "Effect size", y = "") +
-    scale_y_discrete(labels = c("*ln* Relative<br>intestinal length",
+    scale_y_discrete(labels = c("ln Relative<br>intestinal length",
                                 "Temperature")
     ) +
     theme(axis.text.y = ggtext::element_markdown(size = 10),

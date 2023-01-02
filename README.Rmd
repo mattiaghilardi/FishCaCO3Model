@@ -19,7 +19,9 @@ knitr::opts_chunk$set(
 
 The goal of this project is to reproduce all analyses, figures, and tables of the paper
 
-> Add citation
+> Title: Temperature, species identity and morphological traits predict carbonate excretion and mineralogy in tropical reef fishes.
+>
+> Authors: Ghilardi M, Salter MA, Parravicini V, Ferse SCA, Rixen T, Wild C, Birkicht M, Perry, CT, Berry A, Wilson RW, Mouillot D, Bejarano S 
 
 ## Content
 

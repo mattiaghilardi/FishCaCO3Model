@@ -6,8 +6,8 @@ predict(m_caco3_sigma) %>%
   as_tibble() %>%
   bind_cols(data_caco3_f_weight) %>%
   plot_obs_vs_pred(pred = "Estimate", obs = "log_exc_rate",
-                   xlab = "Predicted *ln* Ca(Mg)CO<sub>3</sub> excretion (&mu;mol h<sup>-1</sup>)",
-                   ylab = "Observed *ln* Ca(Mg)CO<sub>3</sub> excretion (&mu;mol h<sup>-1</sup>)",
+                   xlab = "Predicted ln Ca(Mg)CO<sub>3</sub> excretion (&mu;mol h<sup>-1</sup>)",
+                   ylab = "Observed ln Ca(Mg)CO<sub>3</sub> excretion (&mu;mol h<sup>-1</sup>)",
                    point_size = 1.5,
                    text_size = 4) +
   theme(axis.title.x = ggtext::element_markdown(),
@@ -38,8 +38,8 @@ caco3_comp_pred <- as_tibble(predict(m3_caco3_comp, newdata = caco3_comp, robust
 ggpubr::ggarrange(plotlist = Map(function(x, y) {
   plot_obs_vs_pred(obs = log(caco3_comp[, paste0(x, "_umol_h"), drop = TRUE] + 1),
                    pred = log(caco3_comp_pred[, paste0("Estimate.", x, "umolh"), drop = TRUE] + 1),
-                   xlab = "*ln* (x+1) Predicted excretion (&mu;mol h<sup>-1</sup>)",
-                   ylab = "*ln* (x+1) Observed excretion (&mu;mol h<sup>-1</sup>)",
+                   xlab = "ln (*x*+1) Predicted excretion (&mu;mol h<sup>-1</sup>)",
+                   ylab = "ln (*x*+1) Observed excretion (&mu;mol h<sup>-1</sup>)",
                    point_size = 1.5) +
     ggtitle(y) +
     theme(axis.title.x = ggtext::element_markdown(size = 9),
@@ -120,6 +120,7 @@ ggsave(here::here("outputs", "figures", "family_effect_composition.pdf"),
        width = 22, height = 20, units = "cm", device = cairo_pdf)
 
 rm(df, figS4)
+gc()
 
 # Fig. S5
 # Plot average carbonate composition by family
@@ -185,7 +186,7 @@ ggplot(nd, aes(x = prop, y = as.factor(mean_T), fill = caco3_phase)) +
         axis.title.x = ggtext::element_markdown())
 
 ggsave(here::here("outputs", "figures", "family_composition.pdf"),
-       width = 18, height = 18, units = "cm", device = cairo_pdf)
+       width = 18, height = 19, units = "cm", device = cairo_pdf)
 
 rm(nd, fam_traits, biom_fam, taxo)
 
@@ -255,10 +256,10 @@ ggpubr::ggarrange(
   m_caco3_sigma_corrected %>%
     tidybayes::gather_draws(b_scalelog_weight, b_scalelog_ril, b_scalemean_T, b_scalesqrt_asp_ratio) %>%
     tidybayes::median_qi(.width = c(.5, .95)) %>%
-    mutate(.variable = case_when(.variable == "b_scalelog_weight" ~ "*ln* Body mass",
-                                 .variable == "b_scalelog_ril" ~ "*ln* Relative<br>intestinal length",
+    mutate(.variable = case_when(.variable == "b_scalelog_weight" ~ "ln Body mass",
+                                 .variable == "b_scalelog_ril" ~ "ln Relative<br>intestinal length",
                                  .variable == "b_scalemean_T" ~ "Temperature",
-                                 .variable == "b_scalesqrt_asp_ratio" ~ "*sqrt* Aspect ratio")) %>%
+                                 .variable == "b_scalesqrt_asp_ratio" ~ "sqrt Aspect ratio")) %>%
     ggplot(aes(y = reorder(as.factor(.variable), .value), x = .value, xmin = .lower, xmax = .upper)) +
     tidybayes::geom_pointinterval(interval_size_range = c(0.5, 1), point_size = 1.2) +
     ylab("") + xlab("Effect size") +
@@ -323,10 +324,10 @@ ggpubr::ggarrange(
                                   interval_size_range = c(0.5, 1), point_size = 1.2) +
     scale_color_viridis_d(option = "C", end = 0.95) +
     labs(title = "Excretion rate", x = "Effect size", y = "") +
-    scale_y_discrete(labels = c("*ln* Relative<br>intestinal length",
-                                "*sqrt* Aspect ratio",
+    scale_y_discrete(labels = c("ln Relative<br>intestinal length",
+                                "sqrt Aspect ratio",
                                 "Temperature",
-                                "*ln* Body mass")
+                                "ln Body mass")
     ) +
     theme(axis.text.y = ggtext::element_markdown(size = 10),
           plot.title = element_text(face = "bold", size = 12, hjust = 0.5),
@@ -359,7 +360,7 @@ ggpubr::ggarrange(
                                   interval_size_range = c(0.5, 1), point_size = 1.2) +
     scale_color_viridis_d(option = "C", end = 0.95) +
     labs(title = "Probability of excretion", x = "Effect size", y = "") +
-    scale_y_discrete(labels = c("*ln* Relative<br>intestinal length",
+    scale_y_discrete(labels = c("ln Relative<br>intestinal length",
                                 "Temperature")
     ) +
     theme(axis.text.y = ggtext::element_markdown(size = 10),
@@ -374,8 +375,8 @@ ggsave(here::here("outputs", "figures", "sensitivity_fig3.pdf"),
 # Plot observed vs predicted intestinal length at species-level
 int_pred %>%
   plot_obs_vs_pred(pred = "int_length", obs = "il_log",
-                   xlab = "Predicted"~italic(ln)~"int. length (mm)",
-                   ylab = "Observed"~italic(ln)~"int. length (mm)",
+                   xlab = "Predicted ln int. length (mm)",
+                   ylab = "Observed ln int. length (mm)",
                    point_size = 1.5,
                    text_size = 4)
 
@@ -386,8 +387,8 @@ ggsave(here::here("outputs", "figures", "int_validation_species.pdf"),
 # Plot observed vs predicted intestinal length at genus-level
 left_join(int_sp, int_sp_pred) %>%
   plot_obs_vs_pred(pred = "int_length", obs = "il_log",
-                   xlab = "Predicted"~italic(ln)~"int. length (mm)",
-                   ylab = "Observed"~italic(ln)~"int. length (mm)",
+                   xlab = "Predicted ln int. length (mm)",
+                   ylab = "Observed ln int. length (mm)",
                    point_size = 1.5,
                    text_size = 4)
 

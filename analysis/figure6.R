@@ -25,8 +25,8 @@ fig6 <- nd %>%
         legend.title = ggtext::element_markdown())
 
 ggsave(here::here("outputs", "figures", "fig6.png"), fig6,
-       width = 20, height = 12, unit = "cm", dpi = 600, type = "cairo")
+       width = 18, height = 11, unit = "cm", dpi = 600, type = "cairo")
 ggsave(here::here("outputs", "figures", "fig6.pdf"), fig6,
-       width = 20, height = 12, unit = "cm", device = cairo_pdf)
+       width = 18, height = 11, unit = "cm", device = cairo_pdf)
 
 rm(nd)

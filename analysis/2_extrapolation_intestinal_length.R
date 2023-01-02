@@ -137,8 +137,8 @@ predict(m_intestine) %>%
   as_tibble() %>%
   bind_cols(int_moor_f) %>%
   plot_obs_vs_pred(pred = "Estimate", obs = "il_log",
-                   xlab = "Predicted"~italic(ln)~"int. length (mm)",
-                   ylab = "Observed"~italic(ln)~"int. length (mm)",
+                   xlab = "Predicted ln int. length (mm)",
+                   ylab = "Observed ln int. length (mm)",
                    point_size = 1.5,
                    text_size = 4)
 
@@ -172,6 +172,8 @@ rm(corphy_int, corphy_int_m, tree_int, prior_int)
 # then the intestinal length of unobserved taxa can be predicted (see function "intestinal_length()").
 
 # Predict intestinal length
+sp_list <- unique(int_moor_f$species)
+
 pb <- progress::progress_bar$new(
   format = "[:bar] :current/:total [:percent]",
   total = length(sp_list))
@@ -191,12 +193,12 @@ test_extrapolation <- function(){
 
 int_pred <- test_extrapolation()
 
-rm(pb, test_extrapolation)
+rm(pb, test_extrapolation, sp_list)
 
 plot_obs_vs_pred(data = int_pred,
                  pred = "int_length", obs = "il_log",
-                 xlab = "Predicted"~italic(ln)~"int. length (mm)",
-                 ylab = "Observed"~italic(ln)~"int. length (mm)",
+                 xlab = "Predicted ln int. length (mm)",
+                 ylab = "Observed ln int. length (mm)",
                  point_size = 1.5,
                  text_size = 4)
 
@@ -282,8 +284,8 @@ int_sp_pred <- intestinal_length_sp(data = int_sp, ndraws = 2000)
 # Plot observed vs predicted
 left_join(int_sp, int_sp_pred) %>%
   plot_obs_vs_pred(pred = "int_length", obs = "il_log",
-                   xlab = "Predicted"~italic(ln)~"int. length (mm)",
-                   ylab = "Observed"~italic(ln)~"int. length (mm)",
+                   xlab = "Predicted ln int. length (mm)",
+                   ylab = "Observed ln int. length (mm)",
                    point_size = 1.5,
                    text_size = 4)
 
@@ -304,12 +306,12 @@ int_moor_f %>%
   geom_abline(linetype = 2, color = "red", size = 0.7) +
   geom_smooth(method = "lm", size = 0.7, alpha = 0.3, color = "#0D0887FF", fill = "#0D0887FF") +
   stat_regline_equation(aes(label =  paste(..eq.label.., ..rr.label.., sep = "~~~~")), family = "serif", size = 3) +
-  labs(x = "Genus-level predicted"~italic(ln)~"int. length (mm)",
-       y = "Species-level predicted"~italic(ln)~"int. length (mm)") +
+  labs(x = "Genus-level predicted ln int. length (mm)",
+       y = "Species-level predicted ln int. length (mm)") +
   theme(text = element_text(size = 10))
 
 ggsave(here::here("outputs", "figures", "species_vs_genus_IL_pred.png"),
-       width = 10, height = 7, units = "cm", dpi = 600, type = "cairo")
+       width = 10, height = 8, units = "cm", dpi = 600, type = "cairo")
 
 #########################################################################################
 #### Predict intestinal length for fishes in the carbonate dataset
