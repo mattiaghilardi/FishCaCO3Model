@@ -10,8 +10,7 @@ caco3_comp <- readr::read_csv(here::here("data", "raw_data", "caco3_composition.
 # Check names
 fishflux::name_errors(unique(caco3_comp$species))
 # Inaccurate species names found:
-# "Apogon limenus"   "Blenny sp."     "Flounder sp."    "Eucinostomus sp."
-# "Haemulon sp."    "Pelates sexlineatus"
+# "Apogon limenus"      "Haemulon sp."        "Pelates sexlineatus"
 
 # Correct names
 caco3_comp <- caco3_comp %>%
