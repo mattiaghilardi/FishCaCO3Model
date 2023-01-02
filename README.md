@@ -13,8 +13,8 @@ tables of the paper
 > carbonate excretion and mineralogy in tropical reef fishes.
 >
 > Authors: Ghilardi M, Salter MA, Parravicini V, Ferse SCA, Rixen T,
-> Wild C, Birkicht M, Perry, CT, Berry A, Wilson RW, Mouillot D,
-> Bejarano S
+> Wild C, Birkicht M, Perry CT, Berry A, Wilson RW, Mouillot D, Bejarano
+> S
 
 ## Content
 
