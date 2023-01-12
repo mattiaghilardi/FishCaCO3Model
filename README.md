@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# FishCaCO3Model
+# Temperature, species identity and morphological traits predict carbonate excretion and mineralogy in tropical reef fishes
 
 [![License: MIT + file
 LICENSE](https://img.shields.io/badge/License-MIT%20+%20file%20LICENSE-blue.svg)](https://choosealicense.com/licenses/mit/)
