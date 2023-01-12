@@ -5,6 +5,7 @@
 
 [![License: MIT + file
 LICENSE](https://img.shields.io/badge/License-MIT%20+%20file%20LICENSE-blue.svg)](https://choosealicense.com/licenses/mit/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7530092.svg)](https://doi.org/10.5281/zenodo.7530092)
 
 The goal of this project is to reproduce all analyses, figures, and
 tables of the paper
